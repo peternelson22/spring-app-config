@@ -1,11 +1,11 @@
 eureka:
   instance:
-    prefer-ip-address: false
+    prefer-ip-address: true
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://eureka:password@localhost:8761/eureka
+      defaultZone: http://${EUREKA_SERVER_ADDRESS:localhost:8761/eureka}
 management:
   endpoints:
     enabled-by-default: true
